@@ -1,0 +1,86 @@
+{
+    "1" : {
+        "sheet": 1,
+        "regions": [
+            {
+                "labels":[
+                    {
+                        "range": "B3:G3",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "B4:G4",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "B5:D95",
+                        "label": "date"
+                    },
+                    {
+                        "range": "E5:G95",
+                        "label": "data"
+                    }
+                ],
+                "bbox": "B3:G95"
+            }
+        ]
+    },
+
+    "2" : {
+        "sheet": 2,
+        "regions": [
+            {
+                "labels":[
+                    {
+                        "range": "A1:G1",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "A2:G2",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "A3:C93",
+                        "label": "date"
+                    },
+                    {
+                        "range": "D3:G93",
+                        "label": "data"
+                    }
+                ],
+                "bbox": "A1:G93"
+            }
+        ]
+    },
+
+    "3" : {
+        "sheet": 3,
+        "regions": [
+            {
+                "labels":[
+                    {
+                        "range": "A1:H1",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "A2:C2",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "A4:C29",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "D2:H2",
+                        "label": "date"
+                    },
+                    {
+                        "range": "D4:H29",
+                        "label": "data"
+                    }
+                ],
+                "bbox": "A1:H29"
+            }
+        ]
+    }
+}

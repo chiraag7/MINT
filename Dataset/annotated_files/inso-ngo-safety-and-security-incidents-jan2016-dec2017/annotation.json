@@ -1,0 +1,28 @@
+{
+  "1": {
+    "regions": [
+      {
+        "bbox": "A1:R256",
+        "labels": [
+          {
+            "label": "data",
+            "range": "C3:R256"
+          },
+          {
+            "label": "date",
+            "range": "B3:B256"
+          },
+          {
+            "label": "meta",
+            "range": "A1:A256"
+          },
+          {
+            "label": "meta",
+            "range": "A1:R2"
+          }
+        ]
+      }
+    ],
+    "sheet": 1
+  }
+}

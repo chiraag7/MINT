@@ -1,0 +1,48 @@
+{
+  "2": {
+    "regions": [
+      {
+        "bbox": "A7:J47",
+        "labels": [
+          {
+            "label": "data",
+            "range": "C11:I46"
+          },
+          {
+            "label": "data",
+            "range": "I47:I47"
+          },
+          {
+            "label": "meta",
+            "range": "B11:B47"
+          },
+          {
+            "label": "data",
+            "range": "J11:J46"
+          },
+          {
+            "label": "date",
+            "range": "C9:I9"
+          },
+          {
+            "label": "meta",
+            "range": "J9:J10"
+          },
+          {
+            "label": "meta",
+            "range": "A7:I8"
+          },
+          {
+            "label": "meta",
+            "range": "A9:B9"
+          },
+          {
+            "label": "meta",
+            "range": "A11:A46"
+          }
+        ]
+      }
+    ],
+    "sheet": "2"
+  }
+}

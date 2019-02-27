@@ -1,0 +1,29 @@
+{
+    "1" : {
+        "sheet": 1,
+        "regions": [
+            {
+                "labels":[
+                    {
+                        "label": "meta",
+                        "range": "B4:U5"
+                    },
+                    {
+                        "label": "meta",
+                        "range": "A5:A43"
+                    },
+                    {
+                        "label": "date",
+                        "range": "B3:U3"
+                    },
+                    {
+                        "label": "data",
+                        "range": "B6:U43"
+                    }
+
+                ],
+                "bbox": "A3:U43"
+            }
+        ]
+    }
+}

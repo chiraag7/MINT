@@ -1,0 +1,32 @@
+{
+    "1": {
+        "sheet": 1,
+        "regions": [
+            {
+                "labels":[
+                    {
+                        "range": "A1:C1",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "A2:A200",
+                        "label": "date"
+                    },
+                    {
+                        "range": "D1:AC1",
+                        "label": "date"
+                    },
+                    {
+                        "range": "B2:C200",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "D2:AC200",
+                        "label": "data"
+                    }
+                ],
+                "bbox": "A1:AC200"
+            }
+        ]
+    }
+}
