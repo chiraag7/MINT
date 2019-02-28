@@ -3,6 +3,7 @@
 import json
 import re
 import os
+import yaml
 
 def mapChar(c):
     # convert excel letter cell names to indices
@@ -41,15 +42,30 @@ for root, dirs, fs in os.walk(path, topdown=False):
                         for key in annData:
                             print(key, type(annData), name)
                             jsonData = annData[key]["regions"][0]["labels"]
-                            layoutJson = {"layout": []}
+                            
+                            layoutJson = {"version": "1", 
+                                    "resources":"<r_name>", 
+                                    "transformation": [],
+                                    "layout": [],
+                                    "mappings": [],
+                                    "semantic_model":
+                                        {
+                                            "semantic_types":[],
+                                            "semantic_relations":[],
+                                            "ontology_prefixes":
+                                                {"schema":"http://schema.org/"}
+                                        }
+                                    }
 
                             for block in jsonData:
-                                range = block["range"]
-                                label = block["label"]
-                                low, high = range.split(":")
+                                brange = block["range"]
+                                blabel = block["label"]
+                                low, high = brange.split(":")
                                 blockRange = getBlockRange(low, high)
                                 labelLoc = {"location": blockRange}
-                                layoutJson["layout"].append({label: labelLoc})
+                                layoutJson["layout"].append({blabel: labelLoc})
 
-                            with open('.\\Dataset\\annotated_files\\'+name+'\\bihnsRep'+key+'.txt','w') as output:
+                            with open('.\\Dataset\\annotated_files\\'+name+'\\bihnsRep'+key+'.json','w') as output:
                                 output.write(json.dumps(layoutJson, indent=4, sort_keys=True))
+                            with open('.\\Dataset\\annotated_files\\'+name+'\\bihnsRep'+key+'.yaml','w') as f:
+                                yaml.dump(layoutJson, f, default_flow_style=False)

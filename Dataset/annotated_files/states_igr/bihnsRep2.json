@@ -1,0 +1,60 @@
+{
+    "layout": [
+        {
+            "data": {
+                "location": "10..45:2..8"
+            }
+        },
+        {
+            "data": {
+                "location": "46:8..8"
+            }
+        },
+        {
+            "meta": {
+                "location": "10..46:1"
+            }
+        },
+        {
+            "data": {
+                "location": "10..45:9"
+            }
+        },
+        {
+            "date": {
+                "location": "8:2..8"
+            }
+        },
+        {
+            "meta": {
+                "location": "8..9:9"
+            }
+        },
+        {
+            "meta": {
+                "location": "6..7:0..8"
+            }
+        },
+        {
+            "meta": {
+                "location": "8:0..1"
+            }
+        },
+        {
+            "meta": {
+                "location": "10..45:0"
+            }
+        }
+    ],
+    "mappings": [],
+    "resources": "<r_name>",
+    "semantic_model": {
+        "ontology_prefixes": {
+            "schema": "http://schema.org/"
+        },
+        "semantic_relations": [],
+        "semantic_types": []
+    },
+    "transformation": [],
+    "version": "1"
+}

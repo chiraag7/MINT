@@ -1,0 +1,35 @@
+{
+    "layout": [
+        {
+            "meta": {
+                "location": "4:0..3"
+            }
+        },
+        {
+            "meta": {
+                "location": "5..1553:0..3"
+            }
+        },
+        {
+            "date": {
+                "location": "4:4..34"
+            }
+        },
+        {
+            "data": {
+                "location": "5..1553:4..34"
+            }
+        }
+    ],
+    "mappings": [],
+    "resources": "<r_name>",
+    "semantic_model": {
+        "ontology_prefixes": {
+            "schema": "http://schema.org/"
+        },
+        "semantic_relations": [],
+        "semantic_types": []
+    },
+    "transformation": [],
+    "version": "1"
+}
