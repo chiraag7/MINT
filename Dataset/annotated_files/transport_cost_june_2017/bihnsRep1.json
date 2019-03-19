@@ -1,0 +1,50 @@
+{
+    "layout": [
+        {
+            "data": {
+                "location": "2..6:1..18"
+            }
+        },
+        {
+            "date": {
+                "location": "1:1..18"
+            }
+        },
+        {
+            "meta": {
+                "location": "2..6:0"
+            }
+        },
+        {
+            "meta": {
+                "location": "0..1:19..20"
+            }
+        },
+        {
+            "data": {
+                "location": "2..6:19..20"
+            }
+        },
+        {
+            "meta": {
+                "location": "1:0..0"
+            }
+        },
+        {
+            "meta": {
+                "location": "0:0..20"
+            }
+        }
+    ],
+    "mappings": [],
+    "resources": "<r_name>",
+    "semantic_model": {
+        "ontology_prefixes": {
+            "schema": "http://schema.org/"
+        },
+        "semantic_relations": [],
+        "semantic_types": []
+    },
+    "transformation": [],
+    "version": "1"
+}

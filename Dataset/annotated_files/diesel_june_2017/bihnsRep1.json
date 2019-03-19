@@ -1,0 +1,35 @@
+{
+    "layout": [
+        {
+            "data": {
+                "location": "4..43:1..20"
+            }
+        },
+        {
+            "date": {
+                "location": "3:1..18"
+            }
+        },
+        {
+            "meta": {
+                "location": "3..43:0"
+            }
+        },
+        {
+            "meta": {
+                "location": "2..3:19..20"
+            }
+        }
+    ],
+    "mappings": [],
+    "resources": "<r_name>",
+    "semantic_model": {
+        "ontology_prefixes": {
+            "schema": "http://schema.org/"
+        },
+        "semantic_relations": [],
+        "semantic_types": []
+    },
+    "transformation": [],
+    "version": "1"
+}

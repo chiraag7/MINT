@@ -1,0 +1,24 @@
+{
+  "1": {
+    "regions": [
+      {
+        "bbox": "B7:Z190",
+        "labels": [
+          {
+            "label": "data",
+            "range": "D8:Z190"
+          },
+          {
+            "label": "meta",
+            "range": "B7:C190"
+          },
+          {
+            "label": "date",
+            "range": "D7:Z7"
+          }
+        ]
+      }
+    ],
+    "sheet": 1
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "1": {
+    "regions": [
+      {
+        "bbox": "A9:CC50",
+        "labels": [
+          {
+            "label": "data",
+            "range": "C16:CC50"
+          },
+          {
+            "label": "date",
+            "range": "B16:B50"
+          },
+          {
+            "label": "date",
+            "range": "A16:A50"
+          },
+          {
+            "label": "meta",
+            "range": "A9:CC9"
+          },
+          {
+            "label": "meta",
+            "range": "A10:CC10"
+          },
+          {
+            "label": "meta",
+            "range": "A11:CC11"
+          },
+          {
+            "label": "meta",
+            "range": "A12:CC12"
+          },
+          {
+            "label": "meta",
+            "range": "A13:CC13"
+          }
+        ]
+      }
+    ],
+    "sheet": "1"
+  }
+}

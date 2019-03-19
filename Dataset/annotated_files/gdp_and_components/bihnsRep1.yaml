@@ -1,0 +1,16 @@
+layout:
+- data:
+    location: 7..189:3..25
+- meta:
+    location: 6..189:1..2
+- date:
+    location: 6:3..25
+mappings: []
+resources: <r_name>
+semantic_model:
+  ontology_prefixes:
+    schema: http://schema.org/
+  semantic_relations: []
+  semantic_types: []
+transformation: []
+version: '1'

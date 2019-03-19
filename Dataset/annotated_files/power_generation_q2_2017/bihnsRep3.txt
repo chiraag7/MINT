@@ -1,0 +1,29 @@
+{
+    "layout": [
+        {
+            "meta": {
+                "location": "0:0..7"
+            }
+        },
+        {
+            "meta": {
+                "location": "1:0..2"
+            }
+        },
+        {
+            "meta": {
+                "location": "3..28:0..2"
+            }
+        },
+        {
+            "date": {
+                "location": "1:3..7"
+            }
+        },
+        {
+            "data": {
+                "location": "3..28:3..7"
+            }
+        }
+    ]
+}

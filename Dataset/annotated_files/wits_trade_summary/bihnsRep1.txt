@@ -1,0 +1,44 @@
+{
+    "layout": [
+        {
+            "data": {
+                "location": "1..109:5..32"
+            }
+        },
+        {
+            "date": {
+                "location": "0:5..32"
+            }
+        },
+        {
+            "meta": {
+                "location": "1..109:0"
+            }
+        },
+        {
+            "meta": {
+                "location": "1..109:1"
+            }
+        },
+        {
+            "meta": {
+                "location": "1..109:2"
+            }
+        },
+        {
+            "meta": {
+                "location": "1..109:3"
+            }
+        },
+        {
+            "meta": {
+                "location": "1..109:4"
+            }
+        },
+        {
+            "meta": {
+                "location": "0:0..4"
+            }
+        }
+    ]
+}

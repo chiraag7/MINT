@@ -1,0 +1,24 @@
+{
+    "1": {
+        "sheet": 1,
+        "regions": [
+            {
+                "labels":[
+                    {
+                        "range": "A1:A113",
+                        "label": "meta"
+                    },
+                    {
+                        "range": "B1:G1",
+                        "label": "date"
+                    },
+                    {
+                        "range": "B2:G113",
+                        "label": "data"
+                    }
+                ],
+                "bbox": "A1:G113"
+            }
+        ]
+    }
+}

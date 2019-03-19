@@ -1,0 +1,29 @@
+{
+  "1": {
+    "regions": [
+      {
+        "bbox": "A1:AC169",
+        "labels": [
+          {
+            "label": "data",
+            "range": "H2:AC169"
+          },
+          {
+            "label": "date",
+            "range": "J1:AC1"
+          },
+          {
+            "label": "meta",
+            "range": "A1:G169"
+          },
+          {
+            "label": "meta",
+            "range": "H1:I1"
+          }
+
+        ]
+      }
+    ],
+    "sheet": 1
+  }
+}

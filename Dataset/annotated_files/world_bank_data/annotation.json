@@ -1,0 +1,28 @@
+{
+  "1": {
+    "sheet": "1",
+    "regions": [
+      {
+        "labels": [
+          {
+            "range": "A5:D5",
+            "label": "meta"
+          },
+          {
+            "range": "A6:D1554",
+            "label": "meta"
+          },
+          {
+            "range": "E5:BI5",
+            "label": "date"
+          },
+          {
+            "range": "E6:BI1554",
+            "label": "data"
+          }
+        ],
+        "bbox": "A5:BI1554"
+      }
+    ]
+  }
+}
