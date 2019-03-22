@@ -20,3 +20,13 @@
 
     <input_file> - resource file in CSV format
     <output_file> - JSON object of the layout (optional - displays on the std output if not given)
+
+## Annotated Resource Files
+
+  Resource files chosen for annotation:
+
+  https://docs.google.com/document/d/1T4b26yjxTw5u7IPfw7lp4Zg46Bi_vD_10w6gZ1gFQSM/edit?usp=sharing
+
+  Actual resource files can be found in the Dataset directory.
+
+  ( Data source: https://www.dropbox.com/sh/e43uo5iuwupkmsj/AAAzrTJI5UPAKqlQOm_W2bXya?dl=0 )
