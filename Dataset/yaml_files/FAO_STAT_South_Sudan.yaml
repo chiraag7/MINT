@@ -1,0 +1,79 @@
+version: “1”
+resources: csv
+layout:
+ domain_c:
+   location: 1..:0
+ domain:
+   location: 1..:1
+ area_code:
+   location: 1..:2
+ area:
+   location: 1...:3 
+ element_c:
+   location: 1..:4
+ element:
+   location: 1...:5
+ item_code:
+   location: 1...:6
+ item:
+   location: 1...:7
+ year_code:
+   location: 1...:8
+ year:
+   location: 1...:9
+ unit:
+   location: 1...:10
+ value:
+   location: 1...:11
+ flag:
+   location: 1...:12
+ flag_description:
+   location: 1...:13
+mappings:
+	- type: dimension_mapping
+	one2one: domain_c:0 <-> domain_c:0
+	- type: dimension_mapping
+	one2one: domain:0 <-> domain:0
+	- type: dimension_mapping
+	one2one: area_code:0 <-> area_code:0
+	- type: dimension_mapping
+	one2one: area:0 <-> area:0
+	- type: dimension_mapping
+	one2one: element_c:0 <-> element_c:0
+	- type: dimension_mapping
+	one2one: element:0 <-> element:0
+	- type: dimension_mapping
+	one2one: item_code:0 <-> item_code:0
+	- type: dimension_mapping
+	one2one: item:0 <-> item:0
+	- type: dimension_mapping
+	one2one: year_code:0 <-> year_code:0
+	- type: dimension_mapping
+	one2one: year:0 <-> year:0
+	- type: dimension_mapping
+	one2one: unit:0 <-> unit:0
+	- type: dimension_mapping
+	one2one: value:0 <-> value:0
+	- type: dimension_mapping
+	one2one: flag:0 <-> flag:0
+	- type: dimension_mapping
+	one2one: flag_description:0 <-> flag_description:0
+	
+semantic_types:
+ domain_c: schema:Domain_c1--schema:domain
+ domain: schema:Domain1--schema:domain
+ area_code: schema:Area_Code1--schema:area_code
+ area: schema:Area1--schema:area
+ element_c: schema:Element_c1--schema:element_c
+ element: schema:Element1--schema:element
+ item_code: schema:Item_code1--schema:item_code
+ item: schema:Item1--schema:item
+ year_code: schema:Year_code1--schema:year_code
+ year: schema:Year1--schema:year
+ unit: schema:Unit1--schema:unit
+ value: schema:Value1--schema:value
+ flag: schema:Flag1--schema:flag
+ flag_description: schema:Flag_Description--schema:description
+
+semantic_relations:
+ - NA

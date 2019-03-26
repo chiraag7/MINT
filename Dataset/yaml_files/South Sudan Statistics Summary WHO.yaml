@@ -1,0 +1,22 @@
+version: “1”
+resources: csv
+layout:
+ indicator:
+   location: 2...:0
+ year:
+   location: 1:1...
+ result:
+   location: 2...:1...
+
+  mappings:
+	- type: dimension_mapping
+	one2one: result:0 <-> indicator:0
+  - type: dimension_mapping
+  one2one: result:1 <-> year:0
+
+semantic_types:
+ indicator: schema:Indicator1--schema:indicator
+ year: schema:dateTime1--schema:date_time
+ result: schema:Statistics1--rdf:value
+semantic_relations:
+ - schema:Statistics1--schema:relatedTo--schema:Indicator1--schema:recordedDuring--schema:dateTime1

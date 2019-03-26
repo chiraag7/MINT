@@ -1,0 +1,22 @@
+version: “1”
+resources: csv
+layout:
+ category:
+   location: 1...:0
+ year:
+   location: 0:1...
+ result:
+   location: 1...:1...
+  mappings:
+	- type: dimension_mapping
+	one2one: result:0 <-> category:0
+	- type: dimension_mapping
+	one2one: result:1 <-> year:0
+	- type: dimension_mapping
+	
+semantic_types:
+ category: schema:Category1--schema:category
+ year: schema:dateTime1--schema:date_time
+ result: schema:Result1--rdf:value
+semantic_relations:
+  - schema:Result1--schema:recordedDuring--schema:dateTime1--schema:inCategory:Category1

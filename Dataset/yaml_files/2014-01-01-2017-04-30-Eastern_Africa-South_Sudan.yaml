@@ -1,0 +1,160 @@
+version: “1”
+resources: csv
+layout:
+ data_id:
+   location: 1...:0
+ iso:
+   location: 1...:1
+ event_id_cnty:
+   location: 1...:2
+ event_id_no_cnty:
+   location: 1...:3
+ event_date:
+   location: 1...:4
+ year:
+   location: 1...:5   
+ time_precision:
+   location: 1...:6
+ event_type:
+   location: 1...:7
+ actor1:
+   location: 1...:8
+ assoc_actor_1:
+   location: 1...:9
+ inter1:
+   location: 1...:10
+ actor2:
+   location: 1...:11
+ assoc_actor_2:
+   location: 1...:12
+ inter2:
+   location: 1...:13
+ interaction:
+   location: 1...:14
+ region:
+   location: 1...:15
+ country:
+   location: 1...:16
+ admin1:
+   location: 1...:17
+ admin2:
+   location: 1...:18
+ admin3:
+   location: 1...:19
+ location:
+   location: 1...:20
+ latitude:
+   location: 1...:21
+ longitude:
+   location: 1...:22   
+ geo_precision:
+   location: 1...:23
+ source:
+   location: 1...:24
+ source_scale:
+   location: 1...:25   
+ notes:
+   location: 1...:26
+ fatalities:
+   location: 1...:27
+ timestamp:
+   location: 1...:28
+ iso3:
+   location: 1...:29   
+
+  mappings:
+  - type: dimension_mapping
+  one2one: data_id:0 <-> data_id:0
+  - type: dimension_mapping
+  one2one: iso:0 <-> iso:0
+  - type: dimension_mapping
+  one2one: event_id_cnty:0 <-> event_id_cnty:0
+  - type: dimension_mapping
+  one2one: event_id_no_cnty:0 <-> event_id_no_cnty:0
+  - type: dimension_mapping
+  one2one: event_date:0 <-> event_date:0
+  - type: dimension_mapping
+  one2one: year:0 <-> year:0
+  - type: dimension_mapping
+  one2one: time_precision:0 <-> time_precision:0
+  - type: dimension_mapping
+  one2one: event_type:0 <-> event_type:0
+  - type: dimension_mapping
+  one2one: actor1:0 <-> actor1:0
+  - type: dimension_mapping
+  one2one: assoc_actor_1:0 <-> assoc_actor_1:0
+  - type: dimension_mapping
+  one2one: inter1:0 <-> inter1:0
+  - type: dimension_mapping
+  one2one: actor2:0 <-> actor2:0
+  - type: dimension_mapping
+  one2one: assoc_actor_2:0 <-> assoc_actor_2:0
+  - type: dimension_mapping
+  one2one: inter2:0 <-> inter2:0
+  - type: dimension_mapping
+  one2one: interaction:0 <-> interaction:0
+  - type: dimension_mapping
+  one2one: region:0 <-> region:0
+  - type: dimension_mapping
+  one2one: country:0 <-> country:0
+  - type: dimension_mapping
+  one2one: admin1:0 <-> admin1:0
+  - type: dimension_mapping
+  one2one: admin2:0 <-> admin2:0
+  - type: dimension_mapping
+  one2one: admin3:0 <-> admin3:0
+  - type: dimension_mapping
+  one2one: location:0 <-> location:0
+  - type: dimension_mapping
+  one2one: latitude:0 <-> latitude:0
+  - type: dimension_mapping
+  one2one: longitude:0 <-> longitude:0
+  - type: dimension_mapping
+  one2one: geo_precision:0 <-> geo_precision:0
+  - type: dimension_mapping
+  one2one: source:0 <-> source:0
+  - type: dimension_mapping
+  one2one: source_scale:0 <-> source_scale:0
+  - type: dimension_mapping
+  one2one: notes:0 <-> notes:0
+  - type: dimension_mapping
+  one2one: fatalities:0 <-> fatalities:0
+  - type: dimension_mapping
+  one2one: timestamp:0 <-> timestamp:0
+  - type: dimension_mapping
+  one2one: iso3:0 <-> iso3:0
+	
+semantic_types:
+ data_id: schema:Data_ID1--schema:data_id
+ iso: schema:ISO1--schema:iso
+ event_id_cnty: schema:Event_ID_Cnty1--schema:event_id
+ event_id_no_cnty: schema:Event_ID_No_Cnty1--schema:event_id
+ data_id: schema:Data_ID1--schema:data_id
+ event_date: schema:dateTime1--schema:date
+ year: schema:dateTime1--schema:year
+ time_precision: schema:Time_Precision1--schema:time_precision
+ event_type: schema:Event_Type1--schema:event_type
+ actor1: schema:Actor1--schema:actor
+ assoc_actor_1: schema:Assoc_Actor1--schema:assoc_actor
+ inter1: schema:Inter1--schema:inter
+ actor2: schema:Actor2--schema:actor
+ assoc_actor_2: schema:Assoc_Actor2--schema:assoc_actor
+ inter2: schema:Inter2--schema:inter
+ interaction: schema:Interaction1--schema:interaction
+ region1: schema:Region1--schema:region
+ country: schema:Country1--schema:country
+ admin1: schema:Admin1--schema:admin
+ admin2: schema:Admin2--schema:admin
+ admin3: schema:Admin3--schema:admin
+ location: schema:Location1--schema:name
+ latitude: schema:Location1--schema:latitude
+ longitude: schema:Location1--schema:longitude
+ geo_precision: schema:GeoPrecision1--schema:geo_precision
+ source: schema:Source1--schema:source
+ source_scale: schema:Source1--schema:source_scale
+ fatalities: schema:Fatalities1--schema:fatalities
+ timestamp: schema:DateTime2--schema:timestamp
+ iso3: schema:ISO2--schema:iso
+
+semantic_relations:
+  - NA

@@ -1,0 +1,25 @@
+version: “1”
+resources: csv
+layout:
+ month:
+   location: 0:1...
+ category:
+   location: 1..:0
+ result:
+   location: 1..:1...
+  mappings:
+	- type: dimension_mapping
+	one2one: result:0 <-> month:0
+	- type: dimension_mapping
+	one2one: result:1 <-> category:0
+	- type: dimension_mapping
+	one2one: emergency:0 <-> month:0
+	- type: dimension_mapping
+		
+semantic_types:
+ month: schema:dateTime1--schema:date_time
+ category: schema:category1--schema:category
+ result: schema:result1--rdf:value
+
+semantic_relations:
+ - schema:result1--schema:recordedAt--schema:dateTime1--schema:inCategory--schema:category1
