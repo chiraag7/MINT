@@ -1,33 +1,5 @@
-#from . import block
+from LayoutDetector.block import *
 import math
-
-
-class Block:
-    def __init__(self, cellLocations=[], type=0, name="block"):
-        """
-
-        :param cellLocations: gives (x,y) locations of cells in the block
-        :param type: gives the type of the block of cells. { Default : data }
-                    { data : 0, column heading: 1, row heading: 2, metadata: 3 }
-        """
-        cellLocations.sort()
-        self.cellLocations = cellLocations
-        self.type = type
-        self.name = name #"block" + str(type) + "_" + str(len(cellLocations))
-    def setType(self, type):
-        self.type = type
-    def getType(self):
-        return self.type
-    def setCellLocations(self, cellLocations):
-        cellLocations.sort()
-        self.cellLocations = cellLocations
-    def getCellLocations(self):
-        return self.cellLocations
-    def setName(self, name):
-        self.name = name
-    def getName(self):
-        return self.name
-
 
 
 def detectRelationLinks(blockList):
@@ -94,5 +66,5 @@ block2 = Block([(1, 0), (2, 0), (3, 0)], 2, "rh-block")
 block3 = Block([(0, 1), (0, 2), (0, 3), (0, 4)], 0, "d-block")
 block4 = Block([(0, 0)], 3, "md-block")
 relations = detectRelationLinks([block1, block2, block3, block4])
-for r in relations:
-    print(r[0].getName(), " <-> ", r[1].getName())
+#for r in relations:
+#    print(r[0].getName(), " <-> ", r[1].getName())
