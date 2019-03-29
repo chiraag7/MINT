@@ -1,6 +1,6 @@
 from LayoutDetector.block import *
 import math
-
+from LayoutDetector.createBlocks import createBlocks
 
 def detectRelationLinks(blockList):
     """
@@ -61,10 +61,29 @@ def detectRelationLinks(blockList):
 
 
 
-block1 = Block([(0, 1), (0, 2), (0, 3), (0, 4)], 1, "ch-block")
-block2 = Block([(1, 0), (2, 0), (3, 0)], 2, "rh-block")
-block3 = Block([(0, 1), (0, 2), (0, 3), (0, 4)], 0, "d-block")
-block4 = Block([(0, 0)], 3, "md-block")
-relations = detectRelationLinks([block1, block2, block3, block4])
-#for r in relations:
-#    print(r[0].getName(), " <-> ", r[1].getName())
+def getRelations(inputFile, yamlFile):
+    block1 = Block([(0, 1), (0, 2), (0, 3), (0, 4)], 1, "ch-block")
+    block2 = Block([(1, 0), (2, 0), (3, 0)], 2, "rh-block")
+    block3 = Block([(0, 1), (0, 2), (0, 3), (0, 4)], 0, "d-block")
+    block4 = Block([(0, 0)], 3, "md-block")
+    relations = detectRelationLinks([block1, block2, block3, block4])
+    #for r in relations:
+    #    print(r[0].getName(), " <-> ", r[1].getName())
+
+    allBlocks = createBlocks(inputFile, yamlFile)
+    relations = detectRelationLinks(allBlocks)
+    print("\n------------------------ RELATIONS ----------------------\n")
+    print(relations)
+    #print("------ Relations ------")
+    for r in relations:
+        if r[0] and r[1]:
+            print(r[0].getName(), " <-> ", r[1].getName())
+
+    return relations
+'''
+for r in relations:
+    if r[0]: print(r[0].getName())
+    if r[1]: print(r[1].getName())
+'''
+
+#getRelations("data/LivestockLoss_Cattle_Warrap_2017.csv", "data/Livestock_Loss.yaml")

@@ -3,30 +3,13 @@ import sys
 import getopt
 import csv
 from LayoutDetector.block import *
-from LayoutDetector.DetectRelation import detectRelationLinks
-
 
 def usage():
 	print('Usage: python createBlocks.py -c <csv_file> -y <yaml_file>]')
 
 
-def main(argv):
-    #print("ljsbdgv : ", argv )
-    try:
-        options, args = getopt.getopt(argv, "hc:y:")
-    except getopt.GetoptError:
-        print('Incorrect usage')
-        usage()
-        sys.exit(2)
-
-    for option, arg in options:
-        if option == 'h':
-            usage()
-            sys.exit()
-        if option in ("-c"):
-            inputFile = arg
-        elif option in ("-y"):
-            yamlFile = arg
+def createBlocks(inputFile, yamlFile):
+    """ Creats block from yaml files. Can be used for validating/testing the model """
     nColumns = 0
     nRows = 0
     allBlocks = []
@@ -43,6 +26,7 @@ def main(argv):
             type = 0
             if ".." in x: type = 1
             if ".." in y: type = 2
+            if ".." in y and ".." in x: type = 0
             x = nRows if ".." in x else int(x)
             y = nColumns if ".." in y else int(y)
             #type = 0
@@ -53,17 +37,23 @@ def main(argv):
             block = Block(cellLocations, type, str(b))
             allBlocks.append(block)
 
-    relations = detectRelationLinks(allBlocks)
-    print("\n------------------------ RELATIONS ----------------------\n")
-    #print(relations)
-    #print("------ Relations ------")
-    for r in relations:
-        if r[0] and r[1]:
-            print(r[0].getName(), " <-> ", r[1].getName())
-        if r[0]: print(r[0].getName())
-        if r[1]: print(r[1].getName())
-
-    return relations
+    return allBlocks
 
 if __name__ == '__main__':
-	main(sys.argv[1:])
+    argv = sys.argv[1:]
+    try:
+        options, args = getopt.getopt(argv, "hc:y:")
+    except getopt.GetoptError:
+        print('Incorrect usage')
+        usage()
+        sys.exit(2)
+
+    for option, arg in options:
+        if option == 'h':
+            usage()
+            sys.exit()
+        if option in ("-c"):
+            inputFile = arg
+        elif option in ("-y"):
+            yamlFile = arg
+    createBlocks(inputFile, yamlFile)
