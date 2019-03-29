@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  month:
+    location: 0:1...
+  reason:
+    location: 1..:0
+  loss_percentage:
+    location: 1..:1...
+mappings:
+    - type: dimension_mapping
+      one2one: loss_percentage:0 <-> reason:0
+    - type: dimension_mapping
+      one2one: loss_percentage:1 <-> month:0
+semantic_types:
+ reason: schema:Reason1--schema:reason
+ month: schema:dateTime1--schema:date_time
+ loss_percentage: schema:TotalLoss1--rdf:value
+semantic_relations:
+  - schema: TotalLoss1--schema:recordedDuring--schema:dateTime1--schema:becauseOf--schema:Reason1

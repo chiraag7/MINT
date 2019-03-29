@@ -1,0 +1,14 @@
+layout: []
+mappings:
+- one2one: 'loss_percentage:0 <-> reason: 0'
+  type: dimension_mapping
+- one2one: 'loss_percentage:0 <-> month: 0'
+  type: dimension_mapping
+resources: <r_name>
+semantic_model:
+  ontology_prefixes:
+    schema: http://schema.org/
+  semantic_relations: []
+  semantic_types: []
+transformation: []
+version: '1'
