@@ -1,0 +1,12 @@
+version: “1”
+resources: csv
+layout:
+ DateTime:
+   location: 1..:0
+ Polygon1:
+   location: 0:1
+ Precipitation:
+   location: 1…:1
+mappings:
+ type: dimension_mapping
+   one2one: Precipitation:0 <-> DateTime:0
