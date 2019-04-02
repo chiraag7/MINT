@@ -2,21 +2,21 @@ version: “1”
 resources: csv
 layout:
  month:
-   location: 1...:0
+   location: 1..:0
  category:
-   location: 0:1...
- rainfall:
-   location: 1...:1...
+   location: 0:1..
+ rainfall:
+   location: 1..:1..
 
-  mappings:
-	- type: dimension_mapping
-	one2one: rainfall:0 <-> month:0
+mappings:
   - type: dimension_mapping
-  one2one: rainfall:1 <-> category:0
+  one2one: rainfall:0 <-> month:0
+  - type: dimension_mapping
+  one2one: rainfall:1 <-> category:1
 
 semantic_types:
- month: schema:dateTime1--schema:date_time
+ month: schema:dateTime1--schema:date_time
  category: schema:Category1--schema:category
- rain_fall: schema:TotalPrecipitation1--rdf:value
+ rain_fall: schema:TotalPrecipitation1--rdf:value
 semantic_relations:
- - schema:TotalPrecipitation1--schema:recordedDuring--schema:dateTime1
+ - schema:TotalPrecipitation1--schema:recordedDuring--schema:dateTime1
