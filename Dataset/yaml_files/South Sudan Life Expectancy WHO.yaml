@@ -8,7 +8,7 @@ preprocessing:
 layout:
   year: 0:2..;2
   gender: 1:2..4
-  death_rate: 2..:2,..,2
+  death_rate: 2..:2..
   indicator: 2..:0
   age_group: 2..:1
 mappings:
