@@ -1,0 +1,119 @@
+﻿#,County,Livelihood,LHZ % (weighted by area)
+1 ,Juba,Highland Forest And Sorghum,100
+2 ,Budi,Highland Forest And Sorghum,100
+3 ,Ikotos,Highland Forest And Sorghum,55.3199
+4 ,Magwi,Highland Forest And Sorghum,22.9838
+5 ,Torit,Highland Forest And Sorghum,100
+6 ,Akobo,Highland Forest And Sorghum,9.50688
+7 ,Pibor,Highland Forest And Sorghum,8.88493
+8 ,Pochalla,Highland Forest And Sorghum,100
+9 ,Juba,Urban,0
+10 ,Aweil Centre,Urban,10
+11 ,Wau,Urban,43
+12 ,Kajo Keji,Equatorial Maize And Cassava,100
+13 ,Lainya,Equatorial Maize And Cassava,100
+14 ,Morobo,Equatorial Maize And Cassava,100
+15 ,Yei,Equatorial Maize And Cassava,100
+16 ,Ikotos,Equatorial Maize And Cassava,44.6801
+17 ,Magwi,Equatorial Maize And Cassava,77.0162
+18 ,Ezo,Equatorial Maize And Cassava,68.813
+19 ,Ibba,Equatorial Maize And Cassava,88.2908
+20 ,Maridi,Equatorial Maize And Cassava,93.7451
+21 ,Mundri East,Equatorial Maize And Cassava,100
+22 ,Mundri West,Equatorial Maize And Cassava,100
+23 ,Nzara,Equatorial Maize And Cassava,59.5366
+24 ,Tambura,Equatorial Maize And Cassava,15.895
+25 ,Yambio,Equatorial Maize And Cassava,77.3277
+26 ,Terekeka,Eastern Plains Sorghum And Cattle,12.822
+27 ,Lafon,Eastern Plains Sorghum And Cattle,9.14881
+28 ,Akobo,Eastern Plains Sorghum And Cattle,90.4931
+29 ,Ayod,Eastern Plains Sorghum And Cattle,61.1427
+30 ,Bor South,Eastern Plains Sorghum And Cattle,91.1064
+31 ,Canal/pigi,Eastern Plains Sorghum And Cattle,100
+32 ,Duk,Eastern Plains Sorghum And Cattle,69.2655
+33 ,Fangak,Eastern Plains Sorghum And Cattle,38.1104
+34 ,Nyirol,Eastern Plains Sorghum And Cattle,100
+35 ,Twic East,Eastern Plains Sorghum And Cattle,64.5826
+36 ,Uror,Eastern Plains Sorghum And Cattle,100
+37 ,Terekeka,Ironstone Plateau Agro-pastoral,80.5841
+38 ,Awerial,Ironstone Plateau Agro-pastoral,52.3834
+39 ,Cueibet,Ironstone Plateau Agro-pastoral,100
+40 ,Wulu,Ironstone Plateau Agro-pastoral,100
+41 ,Yirol West,Ironstone Plateau Agro-pastoral,41.9814
+42 ,Tonj South,Ironstone Plateau Agro-pastoral,100
+43 ,Jur River,Ironstone Plateau Agro-pastoral,50.1503
+44 ,Mvolo,Ironstone Plateau Agro-pastoral,100
+45 ,Terekeka,Nile Basin Fishing And Agro-pastoral,6.59389
+46 ,Ayod,Nile Basin Fishing And Agro-pastoral,38.8573
+47 ,Bor South,Nile Basin Fishing And Agro-pastoral,8.89362
+48 ,Duk,Nile Basin Fishing And Agro-pastoral,30.7345
+49 ,Fangak,Nile Basin Fishing And Agro-pastoral,61.8896
+50 ,Twic East,Nile Basin Fishing And Agro-pastoral,35.4174
+51 ,Awerial,Nile Basin Fishing And Agro-pastoral,47.6166
+52 ,Yirol East,Nile Basin Fishing And Agro-pastoral,100
+53 ,Guit,Nile Basin Fishing And Agro-pastoral,100
+54 ,Koch,Nile Basin Fishing And Agro-pastoral,32.4802
+55 ,Leer,Nile Basin Fishing And Agro-pastoral,69.0507
+56 ,Panyijiar,Nile Basin Fishing And Agro-pastoral,53.9796
+57 ,Rubkona,Nile Basin Fishing And Agro-pastoral,18.1197
+58 ,Kapoeta East,Eastern Semi-arid Pastoral,100
+59 ,Kapoeta North,Eastern Semi-arid Pastoral,100
+60 ,Kapoeta South,Eastern Semi-arid Pastoral,100
+61 ,Lafon,Eastern Semi-arid Pastoral,90.8512
+62 ,Pibor,Eastern Semi-arid Pastoral,91.1151
+63 ,Rumbek Centre,Greater Bahr El Ghazal Sorghum And Cattle,93.6066
+64 ,Rumbek East,Greater Bahr El Ghazal Sorghum And Cattle,100
+65 ,Rumbek North,Greater Bahr El Ghazal Sorghum And Cattle,63.1718
+66 ,Yirol West,Greater Bahr El Ghazal Sorghum And Cattle,58.0186
+67 ,Aweil Centre,Greater Bahr El Ghazal Sorghum And Cattle,30
+68 ,Aweil East,Greater Bahr El Ghazal Sorghum And Cattle,100
+69 ,Aweil North,Greater Bahr El Ghazal Sorghum And Cattle,100
+70 ,Aweil South,Greater Bahr El Ghazal Sorghum And Cattle,100
+71 ,Aweil West,Greater Bahr El Ghazal Sorghum And Cattle,87.1116
+72 ,Gogrial East,Greater Bahr El Ghazal Sorghum And Cattle,87.7725
+73 ,Gogrial West,Greater Bahr El Ghazal Sorghum And Cattle,100
+74 ,Tonj East,Greater Bahr El Ghazal Sorghum And Cattle,69.1549
+75 ,Tonj North,Greater Bahr El Ghazal Sorghum And Cattle,59.1283
+76 ,Twic,Greater Bahr El Ghazal Sorghum And Cattle,100
+77 ,Abyei,Greater Bahr El Ghazal Sorghum And Cattle,100
+78 ,Jur River,Greater Bahr El Ghazal Sorghum And Cattle,42.745
+79 ,Rumbek Centre,"Oil Resources, Maize And Cattle",6.39345
+80 ,Rumbek North,"Oil Resources, Maize And Cattle",36.8282
+81 ,Koch,"Oil Resources, Maize And Cattle",67.5198
+82 ,Leer,"Oil Resources, Maize And Cattle",30.9493
+83 ,Mayendit,"Oil Resources, Maize And Cattle",100
+84 ,Mayom,"Oil Resources, Maize And Cattle",65.3529
+85 ,Panyijiar,"Oil Resources, Maize And Cattle",46.0204
+86 ,Rubkona,"Oil Resources, Maize And Cattle",31.553
+87 ,Gogrial East,"Oil Resources, Maize And Cattle",12.2275
+88 ,Tonj East,"Oil Resources, Maize And Cattle",30.8451
+89 ,Tonj North,"Oil Resources, Maize And Cattle",40.8717
+90 ,Aweil Centre,"Western Groundnuts, Sesame And Sorghum",60
+91 ,Aweil West,"Western Groundnuts, Sesame And Sorghum",12.8884
+92 ,Jur River,"Western Groundnuts, Sesame And Sorghum",7.10466
+93 ,Raga,"Western Groundnuts, Sesame And Sorghum",100
+94 ,Wau,"Western Groundnuts, Sesame And Sorghum",57
+95 ,Ezo,"Western Groundnuts, Sesame And Sorghum",31.187
+96 ,Ibba,"Western Groundnuts, Sesame And Sorghum",11.7092
+97 ,Maridi,"Western Groundnuts, Sesame And Sorghum",6.25488
+98 ,Nagero,"Western Groundnuts, Sesame And Sorghum",100
+99 ,Nzara,"Western Groundnuts, Sesame And Sorghum",40.4634
+100 ,Tambura,"Western Groundnuts, Sesame And Sorghum",84.105
+101 ,Yambio,"Western Groundnuts, Sesame And Sorghum",22.6723
+102 ,Abiemnhom,Northern Sorhgum And Livestock,100
+103 ,Mayom,Northern Sorhgum And Livestock,34.6471
+104 ,Pariang,Northern Sorhgum And Livestock,100
+105 ,Rubkona,Northern Sorhgum And Livestock,50.3274
+106 ,Fashoda,Northern Sorhgum And Livestock,100
+107 ,Maban,Northern Sorhgum And Livestock,100
+108 ,Malakal,Northern Sorhgum And Livestock,100
+109 ,Manyo,Northern Sorhgum And Livestock,100
+110 ,Melut,Northern Sorhgum And Livestock,100
+111 ,Panyikang,Northern Sorhgum And Livestock,75
+112 ,Renk,Northern Sorhgum And Livestock,100
+113 ,Baliet,Northeastern Maize And Cattle,100
+114 ,Longochuk,Northeastern Maize And Cattle,100
+115 ,Luakpiny/nasir,Northeastern Maize And Cattle,100
+116 ,Maiwut,Northeastern Maize And Cattle,100
+117 ,Panyikang,Northeastern Maize And Cattle,25
+118 ,Ulang,Northeastern Maize And Cattle,100

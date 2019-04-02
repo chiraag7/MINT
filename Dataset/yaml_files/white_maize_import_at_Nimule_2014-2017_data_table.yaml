@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  Year:
+    location: 1..:0
+  Months:
+    location: 0:1..
+  ImportValue:
+    location: 1..:1..
+mappings:
+  type: dimension_mapping
+    one2one: ImportValue:0 <-> Year:0
+  type: dimension_mapping
+    one2one: ImportValue:1 <-> Months:1
+semantic_types:
+  Year: schema:DateTime --rdf:value
+  Month: schema:DateTime --schema:months
+  ImportValue: schema:toatlImportValue --rdf:value
+semantic_relations:
+  - schema:DatTime --schema:hasValue--schema:totalImportValue

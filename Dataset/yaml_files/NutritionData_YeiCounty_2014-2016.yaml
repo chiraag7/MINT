@@ -1,0 +1,22 @@
+version: "1"
+resources: csv
+layout:
+ MonthYear:
+   location: 1..:0
+ Category:
+   location: 0:1..
+ NutritionData:
+   location: 1..:1..
+mappings:
+ type: dimension_mapping
+   one2one: MonthYear:0 <-> NutritionData:0
+ type: dimension_mapping
+   one2one: Category:1 <-> NutritionData:1
+semantic_types:
+ MonthYear: schema:DateTime --rdf:value
+ Category: schema:category --schema:value
+ priceValue: schema:NutritionData --rdf:value
+semantic_relations:
+ - N/A
+
+

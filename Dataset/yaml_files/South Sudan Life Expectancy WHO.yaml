@@ -3,7 +3,7 @@ resources: csv
 preprocessing:
   - type: split
     location: 2..:2..
-    function: |
+    function:  |
       return index[-1] % 2 == 0
 layout:
   year: 0:2..;2
