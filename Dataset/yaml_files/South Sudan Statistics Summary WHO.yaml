@@ -2,17 +2,17 @@ version: “1”
 resources: csv
 layout:
  indicator:
-   location: 2...:0
+   location: 2..:0
  year:
-   location: 1:1...
+   location: 1:1..
  result:
-   location: 2...:1...
+   location: 2..:1..
 
-  mappings:
-	- type: dimension_mapping
-	one2one: result:0 <-> indicator:0
+ mappings:
   - type: dimension_mapping
-  one2one: result:1 <-> year:0
+  one2one: result:0 <-> indicator:0
+  - type: dimension_mapping
+  one2one: result:1 <-> year:1
 
 semantic_types:
  indicator: schema:Indicator1--schema:indicator
