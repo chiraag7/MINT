@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  Category:
+    location: 0:1..  
+  Period:
+    location: 1..:0
+  Population:
+    location: 1..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: Population:0 <-> Period:0
+    - type: dimension_mapping
+      one2one: Population:1 <-> Category:1
+semantic_types:
+ Category: schema:Category
+ Period: schema:DateTime
+ Population: schema:Population--rdf:value
+semantic_relations:
+  - schema: DateTime--schema:hasValue--schema:Population

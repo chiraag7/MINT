@@ -1,0 +1,21 @@
+version: "1"
+resources: csv
+layout:
+  Livelihood:
+    location: 1..:0  
+  Strategy:
+    location: 0:1..
+  DepletionPercentage:
+    location: 1..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: DepletionPercentage:0 <-> Livelihood:0
+    - type: dimension_mapping
+      one2one: DepletionPercentage:1 <-> Strategy:1
+semantic_types:
+ Livelihood: schema:Area
+ Strategy: schema:Strategy
+ DepletionPercentage: schema:DepletionPercentage--rdf:value
+semantic_relations:
+  - schema: DepletionPercentage--schema:becauseOf--schema:Strategy
+  - schema: DepletionPercentage--schema:in--schema:Area
