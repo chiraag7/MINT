@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  State:
+    location: 1..:0  
+  Phase:
+    location: 0:1..
+  PhaseRatio:
+    location: 1..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: PhaseRatio:0 <-> State:0
+    - type: dimension_mapping
+      one2one: PhaseRatio:1 <-> Phase:1
+semantic_types:
+ State: schema:Area
+ Phase: schema:Phase
+ PhaseRatio: schema:Ratio--rdf:value
+semantic_relations:
+  - schema: Phase--schema:contributeTo--schema:PhaseRatio

@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  State:
+    location: 1..:0  
+  Phase:
+    location: 0:1..
+  HungerScale:
+    location: 1..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: HungerScale:0 <-> State:0
+    - type: dimension_mapping
+      one2one: HungerScale:1 <-> Phase:1
+semantic_types:
+ State: schema:State
+ Phase: schema:Phase
+ HungerScale: schema:HungerScale--rdf:value
+semantic_relations:
+  - schema: Phase--schema:contributeTo--schema:HungerScale

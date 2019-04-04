@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  Period:
+    location: 1..:0  
+  Nutrition:
+    location: 0:1..
+  Amount:
+    location: 1..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: Amount:0 <-> Period:0
+    - type: dimension_mapping
+      one2one: Amount:1 <-> Nutrition:1
+semantic_types:
+ Period: schema:DateTime
+ Nutrition: schema:Nutrition
+ Amount: schema:Amount--rdf:value
+semantic_relations:
+  - schema: Nutrition--schema:hasValue--schema:Amount
