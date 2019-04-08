@@ -7,6 +7,7 @@ layout:
    location: 0:1
  Precipitation:
    location: 1…:1
+
 mappings:
- type: dimension_mapping
-   one2one: Precipitation:0 <-> DateTime:0
+  - type: dimension_mapping
+    one2one: Precipitation:0 <-> DateTime:0

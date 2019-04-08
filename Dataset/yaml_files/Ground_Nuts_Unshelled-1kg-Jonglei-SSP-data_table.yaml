@@ -2,42 +2,42 @@ version: “1”
 resources: csv
 layout:
  Year:
-   location: 1..4:0
+  location: 1..4:0
  Months:
-   location: 0:1..
+  location: 0:1..
  4YearAvg:
-   location: 5:1..
+  location: 5:1..
  prevMonth%:
-   location: 6:1..
+  location: 6:1..
  sameMonthPrevYear%:
-   location: 7:1..
+  location: 7:1..
  4YearAvg%:
    location: 8:1..
  Prev6Mothns%:
    location: 8:1..
  priceValue:
-   location: 1..5:1..
+  location: 1..5:1..
  percentageValue: 
-   location: 6..:1..
+  location: 6..:1..
 mappings:
- type: dimension_mapping
-   one2one: priceValue:0 <-> Year:0
- type: dimension_mapping
-   one2one: priceValue:1 <-> Months:0
- type: dimension_mapping
-   one2one: priceValue:0 <-> 4YearAvg:0
- type: dimension_mapping
-   one2one: percentageValue:0 <-> Parameters:0
- type: dimension_mapping
-   one2one: percentageValue:0 <-> prevMonth%
- type: dimension_mapping
-   one2one: percentageValue:0 <-> sameMonthPrevYear%
- type: dimension_mapping
-   one2one: percentageValue:0 <-> 4YearAvg%
- type: dimension_mapping
-   one2one: percentageValue:0 <-> Prev6Mothns%
- type: dimension_mapping
-   one2one: percentageValue:1 <-> Months:0
+  - type: dimension_mapping
+    one2one: priceValue:0 <-> Year:0
+  - type: dimension_mapping
+    one2one: priceValue:1 <-> Months:0
+  - type: dimension_mapping
+    one2one: priceValue:0 <-> 4YearAvg:0
+  - type: dimension_mapping
+    one2one: percentageValue:0 <-> Parameters:0
+  - type: dimension_mapping
+    one2one: percentageValue:0 <-> prevMonth%
+  - type: dimension_mapping
+    one2one: percentageValue:0 <-> sameMonthPrevYear%
+  - type: dimension_mapping
+    one2one: percentageValue:0 <-> 4YearAvg%
+  - type: dimension_mapping
+    one2one: percentageValue:0 <-> Prev6Mothns%
+  - type: dimension_mapping
+    one2one: percentageValue:1 <-> Months:0
  
 semantic_types:
  Year: schema:DateTime --rdf:value

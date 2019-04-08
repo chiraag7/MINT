@@ -4,7 +4,7 @@ layout:
  data_id:
    location: 1..:0
  iso:
-   location: 1..:1
+   location: 1..:1
  event_id_cnty:
    location: 1..:2
  event_id_no_cnty:
@@ -12,7 +12,7 @@ layout:
  event_date:
    location: 1..:4
  year:
-   location: 1..:5   
+   location: 1..:5
  time_precision:
    location: 1..:6
  event_type:
@@ -46,13 +46,13 @@ layout:
  latitude:
    location: 1..:21
  longitude:
-   location: 1..:22   
+   location: 1..:22
  geo_precision:
    location: 1..:23
  source:
    location: 1..:24
  source_scale:
-   location: 1..:25   
+   location: 1..:25
  notes:
    location: 1..:26
  fatalities:
@@ -60,69 +60,69 @@ layout:
  timestamp:
    location: 1..:28
  iso3:
-   location: 1..:29   
+   location: 1..:29
 
- mappings:
+mappings:
   - type: dimension_mapping
-  one2one: data_id:0 <-> data_id:0
+    one2one: data_id:0 <-> data_id:0
   - type: dimension_mapping
-  one2one: iso:0 <-> iso:0
+    one2one: iso:0 <-> iso:0
   - type: dimension_mapping
-  one2one: event_id_cnty:0 <-> event_id_cnty:0
+    one2one: event_id_cnty:0 <-> event_id_cnty:0
   - type: dimension_mapping
-  one2one: event_id_no_cnty:0 <-> event_id_no_cnty:0
+    one2one: event_id_no_cnty:0 <-> event_id_no_cnty:0
   - type: dimension_mapping
-  one2one: event_date:0 <-> event_date:0
+    one2one: event_date:0 <-> event_date:0
   - type: dimension_mapping
-  one2one: year:0 <-> year:0
+    one2one: year:0 <-> year:0
   - type: dimension_mapping
-  one2one: time_precision:0 <-> time_precision:0
+    one2one: time_precision:0 <-> time_precision:0
   - type: dimension_mapping
-  one2one: event_type:0 <-> event_type:0
+    one2one: event_type:0 <-> event_type:0
   - type: dimension_mapping
-  one2one: actor1:0 <-> actor1:0
+    one2one: actor1:0 <-> actor1:0
   - type: dimension_mapping
-  one2one: assoc_actor_1:0 <-> assoc_actor_1:0
+    one2one: assoc_actor_1:0 <-> assoc_actor_1:0
   - type: dimension_mapping
-  one2one: inter1:0 <-> inter1:0
+    one2one: inter1:0 <-> inter1:0
   - type: dimension_mapping
-  one2one: actor2:0 <-> actor2:0
+    one2one: actor2:0 <-> actor2:0
   - type: dimension_mapping
-  one2one: assoc_actor_2:0 <-> assoc_actor_2:0
+    one2one: assoc_actor_2:0 <-> assoc_actor_2:0
   - type: dimension_mapping
-  one2one: inter2:0 <-> inter2:0
+    one2one: inter2:0 <-> inter2:0
   - type: dimension_mapping
-  one2one: interaction:0 <-> interaction:0
+    one2one: interaction:0 <-> interaction:0
   - type: dimension_mapping
-  one2one: region:0 <-> region:0
+    one2one: region:0 <-> region:0
   - type: dimension_mapping
-  one2one: country:0 <-> country:0
+    one2one: country:0 <-> country:0
   - type: dimension_mapping
-  one2one: admin1:0 <-> admin1:0
+    one2one: admin1:0 <-> admin1:0
   - type: dimension_mapping
-  one2one: admin2:0 <-> admin2:0
+    one2one: admin2:0 <-> admin2:0
   - type: dimension_mapping
-  one2one: admin3:0 <-> admin3:0
+    one2one: admin3:0 <-> admin3:0
   - type: dimension_mapping
-  one2one: location:0 <-> location:0
+    one2one: location:0 <-> location:0
   - type: dimension_mapping
-  one2one: latitude:0 <-> latitude:0
+    one2one: latitude:0 <-> latitude:0
   - type: dimension_mapping
-  one2one: longitude:0 <-> longitude:0
+    one2one: longitude:0 <-> longitude:0
   - type: dimension_mapping
-  one2one: geo_precision:0 <-> geo_precision:0
+    one2one: geo_precision:0 <-> geo_precision:0
   - type: dimension_mapping
-  one2one: source:0 <-> source:0
+    one2one: source:0 <-> source:0
   - type: dimension_mapping
-  one2one: source_scale:0 <-> source_scale:0
+    one2one: source_scale:0 <-> source_scale:0
   - type: dimension_mapping
-  one2one: notes:0 <-> notes:0
+    one2one: notes:0 <-> notes:0
   - type: dimension_mapping
-  one2one: fatalities:0 <-> fatalities:0
+    one2one: fatalities:0 <-> fatalities:0
   - type: dimension_mapping
-  one2one: timestamp:0 <-> timestamp:0
+    one2one: timestamp:0 <-> timestamp:0
   - type: dimension_mapping
-  one2one: iso3:0 <-> iso3:0
+    one2one: iso3:0 <-> iso3:0
   
 semantic_types:
  data_id: schema:Data_ID1--schema:data_id
@@ -131,10 +131,10 @@ semantic_types:
  event_id_no_cnty: schema:Event_ID_No_Cnty1--schema:event_id
  data_id: schema:Data_ID1--schema:data_id
  event_date: schema:dateTime1--schema:date
- year: schema:dateTime1--schema:year
+ year: schema:dateTime1--schema:year
  time_precision: schema:Time_Precision1--schema:time_precision
  event_type: schema:Event_Type1--schema:event_type
- actor1: schema:Actor1--schema:actor
+ actor1: schema:Actor1--schema:actor
  assoc_actor_1: schema:Assoc_Actor1--schema:assoc_actor
  inter1: schema:Inter1--schema:inter
  actor2: schema:Actor2--schema:actor
