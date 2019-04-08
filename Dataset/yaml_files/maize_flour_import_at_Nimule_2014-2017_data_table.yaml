@@ -8,9 +8,9 @@ layout:
   ImportValue:
     location: 1..:1..
 mappings:
-  type: dimension_mapping
+  - type: dimension_mapping
     one2one: ImportValue:0 <-> Year:0
-  type: dimension_mapping
+  - type: dimension_mapping
     one2one: ImportValue:1 <-> Months:1
 semantic_types:
   Year: schema:DateTime --rdf:value

@@ -10,11 +10,11 @@ layout:
  LHZ:
    location: 1..:3
 mappings:
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: County:0 <-> \#:0
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: Livelihood:1 <-> \#:1
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: LHZ:1 <-> \#:1
 semantic_types:
  County: schema:County --rdf:string
@@ -22,5 +22,3 @@ semantic_types:
  LHZ: schema:LHZ --rdf:value
 semantic_relations:
  - N/A
-
-

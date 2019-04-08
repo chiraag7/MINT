@@ -8,9 +8,9 @@ layout:
  NutritionData:
    location: 1..:1..
 mappings:
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: MonthYear:0 <-> NutritionData:0
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: Category:1 <-> NutritionData:1
 semantic_types:
  MonthYear: schema:DateTime --rdf:value
