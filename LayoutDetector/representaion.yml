@@ -1,4 +1,8 @@
-layout: []
+layout:
+  column_header: 0:1..
+  data: 1..:1..
+  metadata: 0:0
+  row_header: 1..:0
 mappings:
 - one2one: 'data:0 <-> column_header: 0'
   type: dimension_mapping
