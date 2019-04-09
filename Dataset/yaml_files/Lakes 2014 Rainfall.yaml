@@ -1,7 +1,7 @@
 version: “1”
 resources: csv
 layout:
- month:
+ month:
    location: 1..:0
  category:
    location: 0:1..
@@ -10,9 +10,9 @@ layout:
 
 mappings:
   - type: dimension_mapping
-  one2one: rainfall:0 <-> month:0
+    one2one: rainfall:0 <-> month:0
   - type: dimension_mapping
-  one2one: rainfall:1 <-> category:1
+    one2one: rainfall:1 <-> category:1
 
 semantic_types:
  month: schema:dateTime1--schema:date_time

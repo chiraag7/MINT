@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  Livelihood:
+    location: 1..:0 
+  Phase:
+    location: 0:1..
+  Ratio:
+    location: 1..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: Ratio:0 <-> Livelihood:0
+    - type: dimension_mapping
+      one2one: Ratio:1 <-> Phase:1
+semantic_types:
+ Livelihood: schema:Zone
+ Phase: schema:Level
+ Ratio: schema:Ratio--rdf:value
+semantic_relations:
+  - schema: Phase--schema:contributeTo--schema:Ratio

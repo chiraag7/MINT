@@ -1,18 +1,18 @@
 version: “1”
 resources: csv
 layout:
- year:
-   location: 0:1...
+ year:
+  location: 0:1...
  gdp_growth:
-   location: 0:3...
+  location: 0:3...
 
-  mappings:
-	- type: dimension_mapping
-	one2one: gdp_growth:0 <-> year:0
+mappings:
+  - type: dimension_mapping
+    one2one: gdp_growth:0 <-> year:0
 
 semantic_types:
- year: schema:dateTime1--schema:date_time
+ year: schema:dateTime1--schema:date_time
  gdp_growth: schema:gdpGrowth1--schema:gdp_growth
  
 semantic_relations:
- - schema:gdpGrowth1--schema:recordedDuring--schema:dateTime1
+ - schema:gdpGrowth1--schema:recordedDuring--schema:dateTime1

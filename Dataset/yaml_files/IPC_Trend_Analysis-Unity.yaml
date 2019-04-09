@@ -5,18 +5,18 @@ layout:
   location: 1..:0
  category:
   location: 0:1..
- rainfall:
+ result:
   location: 1..:1..
-
 mappings:
   - type: dimension_mapping
-    one2one: rainfall:0 <-> month:0
+    one2one: result:0 <-> month:0
   - type: dimension_mapping
-    one2one: rainfall:1 <-> category:1
-
+    one2one: result:1 <-> category:1
+    
 semantic_types:
  month: schema:dateTime1--schema:date_time
- category: schema:Category1--schema:category
- rain_fall: schema:TotalPrecipitation1--rdf:value
+ category: schema:category1--schema:category
+ result: schema:result1--rdf:value
+
 semantic_relations:
- - schema:TotalPrecipitation1--schema:recordedDuring--schema:dateTime1
+ - schema:result1--schema:recordedAt--schema:dateTime1--schema:inCategory--schema:category1

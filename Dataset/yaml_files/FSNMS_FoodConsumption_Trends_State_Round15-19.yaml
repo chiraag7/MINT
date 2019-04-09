@@ -1,0 +1,20 @@
+version: "1"
+resources: csv
+layout:
+  State:
+    location: 1..:0  
+  Period:
+    location: 0:1..
+  CombinedPercentage:
+    location: 1..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: CombinedPercentage:0 <-> State:0
+    - type: dimension_mapping
+      one2one: CombinedPercentage:1 <-> Period:1
+semantic_types:
+ State: schema:State
+ Period: schema:DateTime
+ CombinedPercentage: schema:CombinedPercentage--rdf:value
+semantic_relations:
+  - schema: CombinedPercentage--schema:recordedAt--DateTime

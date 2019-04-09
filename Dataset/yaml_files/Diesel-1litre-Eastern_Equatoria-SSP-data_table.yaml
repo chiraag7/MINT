@@ -20,23 +20,23 @@ layout:
  percentageValue: 
    location: 6..:1..
 mappings:
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: priceValue:0 <-> Year:0
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: priceValue:1 <-> Months:0
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: priceValue:0 <-> 4YearAvg:0
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: percentageValue:0 <-> Parameters:0
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: percentageValue:0 <-> prevMonth%
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: percentageValue:0 <-> sameMonthPrevYear%
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: percentageValue:0 <-> 4YearAvg%
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: percentageValue:0 <-> Prev6Mothns%
- type: dimension_mapping
+ - type: dimension_mapping
    one2one: percentageValue:1 <-> Months:0
  
 semantic_types:

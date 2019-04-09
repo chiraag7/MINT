@@ -12,6 +12,10 @@
 
   Python3
 
+  Install pyyaml using
+
+      pip install pyyaml
+
 ### Procedure
 
   Run the program as follows: -

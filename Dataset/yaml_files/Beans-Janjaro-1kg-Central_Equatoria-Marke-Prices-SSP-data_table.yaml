@@ -1,0 +1,46 @@
+version: "1"
+resources: csv
+layout:
+  Year:
+    location: 1..4:0
+  Month:
+    location: 0:1..
+  4YearAverage:
+    location: 5:1..
+  PreMonth%:
+    location: 6:1..
+  SameMonthPreYear%:
+    location: 7:1..
+  4YearAverage%:
+    location: 8:1..
+  Pre6Months%:
+    location: 9:1..
+  PriceValue:
+    location: 1..5:1..
+  PercentageValue:
+    location: 6..:1..
+mappings:
+    - type: dimension_mapping
+      one2one: PriceValue:0 <-> Year:0
+    - type: dimension_mapping
+      one2one: PriceValue:1 <-> Month:1
+    - type: dimension_mapping
+      one2one: PriceValue:0 <-> 4YearAverage:0
+    - type: dimension_mapping
+      one2one: PercentageValue:1 <-> Month:1
+    - type: dimension_mapping
+      one2one: PercentageValue:0 <-> PreMonth%:0
+    - type: dimension_mapping
+      one2one: PercentageValue:0 <-> SameMonthPreYear%:0
+    - type: dimension_mapping
+      one2one: PercentageValue:0 <-> 4YearAverage%:0
+    - type: dimension_mapping
+      one2one: PercentageValue:0 <-> Pre6Months%:0
+semantic_types:
+ Year: schema:DateTime--rdf:value
+ Month: schema:DateTime--schema:month
+ PriceValue: schema:PriceValue--rdf:value
+ PercentageValue: schema:PercentageValue--rdf:value
+semantic_relations:
+  - schema: DateTime--schema:hasValue--schema:PriceValue
+  - schema: DateTime--schema:hasValue--schema:PercentageValue
