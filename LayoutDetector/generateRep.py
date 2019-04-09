@@ -40,3 +40,27 @@ def generateRepresentaion():
 representaion = generateRepresentaion()
 with open('representaion.yml', 'w') as output:
     yaml.dump(representaion, output, default_flow_style=False)
+
+
+def getDotNotation(cellLocations):
+    mini = cellLocations[0][0]
+    minj = cellLocations[0][1]
+    samei = True
+    samej = True
+    previ, prevj = mini, minj
+    for i,j in cellLocations[1:]:
+        if i < mini:
+            mini = i
+        if j < minj:
+            minj = j
+        if prevj != j:
+            samej = False
+        if previ != i:
+            samei = False
+    string = str(mini)
+    if !samei:
+        string += ".."
+    string += ":" + str(minij)
+    if !samej:
+        string += ".."
+    return string
