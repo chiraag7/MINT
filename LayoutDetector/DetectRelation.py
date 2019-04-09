@@ -1,6 +1,7 @@
 from LayoutDetector.block import *
 import math
 from LayoutDetector.createBlocks import createBlocks
+from LayoutDetector.getBlocks import getBlocks
 
 def detectRelationLinks(blockList):
     """
@@ -16,6 +17,7 @@ def detectRelationLinks(blockList):
     # groups different types of block together, and stores the middle most cell for each block
     blockTypes = {0:[], 1:[], 2:[], 3:[]}
     for b in blockList:
+
         cells = b.getCellLocations()
         mid = cells[len(cells)//2]
         blockTypes[b.type].append((b, mid))
@@ -70,7 +72,8 @@ def getRelations(inputFile, yamlFile):
     #for r in relations:
     #    print(r[0].getName(), " <-> ", r[1].getName())
 
-    allBlocks = createBlocks(inputFile, yamlFile)
+    #allBlocks = createBlocks(inputFile, yamlFile)
+    allBlocks = getBlocks(inputFile)
     relations = detectRelationLinks(allBlocks)
     print("\n------------------------ RELATIONS ----------------------\n")
     print(relations)

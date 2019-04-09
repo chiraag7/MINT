@@ -7,23 +7,23 @@ import yaml
 and relations detected from LayoutDetector"""
 
 def generateRepresentaion():
-    detectedBlocks = getBlocks()
+    detectedBlocks = getBlocks("data/LivestockLoss_Cattle_Warrap_2017.csv")
     detectedRelations = getRelations("data/LivestockLoss_Cattle_Warrap_2017.csv", "data/Livestock_Loss.yaml")
 
-    layoutJson = {"version": "1",
-                                    "resources":"<r_name>",
-                                    "transformation": [],
-                                    "layout": [],
-                                    "mappings": [],
-                                    "semantic_model":
-                                        {
-                                            "semantic_types":[],
-                                            "semantic_relations":[],
-                                            "ontology_prefixes":
-                                                {"schema":"http://schema.org/"}
-                                        }
-                                    }
-
+    layoutJson = {
+                "version": "1",
+                "resources":"<r_name>",
+                "transformation": [],
+                "layout": [],
+                "mappings": [],
+                "semantic_model":{
+                    "semantic_types":[],
+                    "semantic_relations":[],
+                    "ontology_prefixes":{"schema":"http://schema.org/"}
+                    }
+                }
+    for block in detectedBlocks:
+        layoutJson["layout"][block.name] = "0:1.."
     #print("detectedRelations : ", detectedRelations)
     for relation in detectedRelations:
         if relation[0] and relation[1]:

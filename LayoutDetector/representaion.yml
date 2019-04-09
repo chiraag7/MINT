@@ -1,8 +1,12 @@
 layout: []
 mappings:
-- one2one: 'loss_percentage:0 <-> reason: 0'
+- one2one: 'data:0 <-> column_header: 0'
   type: dimension_mapping
-- one2one: 'loss_percentage:0 <-> month: 0'
+- one2one: 'data:0 <-> row_header: 0'
+  type: dimension_mapping
+- one2one: 'column_header:0 <-> metadata: 0'
+  type: dimension_mapping
+- one2one: 'row_header:0 <-> metadata: 0'
   type: dimension_mapping
 resources: <r_name>
 semantic_model:
