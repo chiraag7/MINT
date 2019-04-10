@@ -51,9 +51,10 @@ def generateRepresentaion():
     #print("detectedRelations : ", detectedRelations)
     for relation in detectedRelations:
         if relation[0] and relation[1]:
+            mapValue = relation[0].getName() + ":0 <-> " + relation[1].getName() + ":0"
             mapping = {
-                    "type": "dimension_mapping",
-                    "one2one": ''.join([relation[0].getName(),":0 <-> ", relation[1].getName(), ": 0"])
+                    "type": str("dimension_mapping"),
+                    "one2one": mapValue
                    }
             layoutJson['mappings'].append(mapping)
 
