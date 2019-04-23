@@ -9,8 +9,8 @@ from collections import OrderedDict
 # mapping = [("year:0", "rainfall:0"), ("month:1", "rainfall:1")]
 
 # rowNum % (rowGroup * subRowNum) = 0
-rowNum = 6
-rowGroup = 6
+rowNum = 12
+rowGroup = 4
 subRowNum = 1
 colNum = 6
 colGroup = 1
@@ -18,6 +18,7 @@ colGroup = 1
 
 # 1: percentage, 2: decimal number, 3: string
 dataType = list()
+totalDataType = list()
 
 monthList = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 dataList = list()
@@ -68,6 +69,7 @@ if rowGroup > 1:
                     subList.append(str(year + 1918))
                     subList.append(subRowList[x2])
 
+                    totalDataType.append(dataType[x2])
                     subList = insert_data_cell_into_list(x2, subList)
                     dataList.append(subList)
             else:
@@ -75,9 +77,11 @@ if rowGroup > 1:
                 subList = list()
                 subList.append(str(year + 1918))
 
+                totalDataType.append(dataType[typeIndex])
                 subList = insert_data_cell_into_list(typeIndex, subList)
                 dataList.append(subList)
 
+    print("totalDataType: " + str(totalDataType))
 # cut vertically
 else:
     tmpDataList = list()
@@ -155,19 +159,30 @@ layoutObj['year'] = {
 block = 0
 if rowGroup > 1:
     lastIndex = 1
-    for i in range(1, len(dataType)):
-        if dataType[i] != dataType[i - 1]:
+    for i in range(1, len(totalDataType)):
+        if totalDataType[i] != totalDataType[i - 1]:
             variableStr = 'rainfall_' + str(block)
-            layoutObj[variableStr] = {
-                'location': str(lastIndex) + '..' + str(int(rowNum / rowGroup) * i) + ':1..'
-            }
+            if i == lastIndex:
+                layoutObj[variableStr] = {
+                    'location': str(i) + ':1..'
+                }
+            else:
+                layoutObj[variableStr] = {
+                    'location': str(lastIndex) + '..' + str(i) + ':1..'
+                }
             block += 1
-            lastIndex = int(rowNum / rowGroup) * i + 1
+            lastIndex = i + 1
 
     variableStr = 'rainfall_' + str(block)
-    layoutObj[variableStr] = {
-        'location': str(lastIndex) + '..' + str(rowNum) + ':1..'
-    }
+    if lastIndex == rowNum:
+        layoutObj[variableStr] = {
+            'location': str(rowNum) + ':1..'
+        }
+    else:
+        layoutObj[variableStr] = {
+            'location': str(lastIndex) + '..' + str(rowNum) + ':1..'
+        }
+    block += 1
 
     yamlData['layout'] = layoutObj
 
@@ -187,6 +202,7 @@ else:
     layoutObj[variableStr] = {
         'location': '1..:' + str(lastIndex) + '..' + str(colNum)
     }
+    block += 1
     yamlData['layout'] = layoutObj
 
 
