@@ -9,11 +9,12 @@ from collections import OrderedDict
 # mapping = [("year:0", "rainfall:0"), ("month:1", "rainfall:1")]
 
 # rowNum % (rowGroup * subRowNum) = 0
-rowNum = 12
-rowGroup = 4
+rowNum = 6
+rowGroup = 1
 subRowNum = 1
-colNum = 6
-colGroup = 1
+colNum = 12
+colGroup = 4
+subColNum = 1
 
 
 # 1: percentage, 2: decimal number, 3: string
@@ -50,7 +51,9 @@ for i in range(subRowNum):
 
 
 if subRowNum > 1:
-    dataTypeSize = max(subRowNum, colGroup)
+    dataTypeSize = subRowNum
+elif subColNum > 1:
+    dataTypeSize = subColNum
 else:
     dataTypeSize = max(rowGroup, colGroup)
 for i in range(dataTypeSize):
@@ -81,7 +84,6 @@ if rowGroup > 1:
                 subList = insert_data_cell_into_list(typeIndex, subList)
                 dataList.append(subList)
 
-    print("totalDataType: " + str(totalDataType))
 # cut vertically
 else:
     tmpDataList = list()
@@ -89,25 +91,22 @@ else:
     for y in range(rowNum):
         year = random.randint(0, 101)
         subList.append(str(year + 1918))
-
     tmpDataList.append(subList)
 
     for typeIndex in range(colGroup):
-        for x in range(int(colNum / colGroup)):
+        for x in range(int((colNum / colGroup) / subColNum)):
+            if subColNum > 1:
+                for x2 in range(subColNum):
+                    subList = list()
+                    totalDataType.append(dataType[x2])
+                    subList = insert_data_cell_into_list(x2, subList)
+                    tmpDataList.append(subList)
 
-            subList = list()
-            for y in range(rowNum):
-                if dataType[typeIndex] == 1:
-                    dataCell = str(random.randint(0, 100)) + "%"
-                elif dataType[typeIndex] == 2:
-                    dataCell = str(round(random.random(), 2))
-                elif dataType[typeIndex] == 3:
-                    dataCell = random_generator()
-                else:
-                    dataCell = random_generator()
-                subList.append(dataCell)
-
-            tmpDataList.append(subList)
+            else:
+                subList = list()
+                totalDataType.append(dataType[typeIndex])
+                subList = insert_data_cell_into_list(typeIndex, subList)
+                tmpDataList.append(subList)
 
     # do rotation
     for y in range(rowNum):
@@ -116,6 +115,9 @@ else:
             subList.append(tmpDataList[x][y])
 
         dataList.append(subList)
+
+
+print("totalDataType: " + str(totalDataType))
 
 # write csv
 outputFileName = "random_data.csv"
@@ -127,11 +129,21 @@ with open(outputFileName, "w") as fp:
     if subRowNum > 1:
         headerList.append("#")
 
-    for i in range(colNum):
-        headerList.append(monthList[i])
+    for i in range(int(colNum / subColNum)):
+        for j in range(subColNum):
+            headerList.append(monthList[i])
+
+    # add 2-level column header
+    subHeaderList = list()
+    subHeaderList.append("#")
+    for i in range(int(colNum / subColNum)):
+        for j in range(subColNum):
+            subHeaderList.append("c" + str(j))
 
     w = csv.writer(fp)
     w.writerow(headerList)
+    if subColNum > 1:
+        w.writerow(subHeaderList)
     w.writerows(dataList)
 
 
@@ -189,20 +201,31 @@ if rowGroup > 1:
 # cut vertically
 else:
     lastIndex = 1
-    for i in range(1, len(dataType)):
-        if dataType[i] != dataType[i - 1]:
+    for i in range(1, len(totalDataType)):
+        if totalDataType[i] != totalDataType[i - 1]:
             variableStr = 'rainfall_' + str(block)
-            layoutObj[variableStr] = {
-                'location': '1..:' + str(lastIndex) + '..' + str(int(colNum / colGroup) * i)
-            }
+            if i == lastIndex:
+                layoutObj[variableStr] = {
+                    'location': '1..:' + str(i)
+                }
+            else:
+                layoutObj[variableStr] = {
+                    'location': '1..:' + str(lastIndex) + '..' + str(i)
+                }
             block += 1
-            lastIndex = int(colNum / colGroup) * i + 1
+            lastIndex = i + 1
 
     variableStr = 'rainfall_' + str(block)
-    layoutObj[variableStr] = {
-        'location': '1..:' + str(lastIndex) + '..' + str(colNum)
-    }
+    if lastIndex == colNum:
+        layoutObj[variableStr] = {
+            'location': '1..:' + str(colNum)
+        }
+    else:
+        layoutObj[variableStr] = {
+            'location': '1..:' + str(lastIndex) + '..' + str(colNum)
+        }
     block += 1
+
     yamlData['layout'] = layoutObj
 
 
